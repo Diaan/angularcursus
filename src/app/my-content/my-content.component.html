@@ -1,0 +1,41 @@
+<app-hero [title]="title" [image]="backgroundImage"></app-hero>
+<div class="container section">
+  <div class="columns">
+    <section class="column">
+      <div class="box column">
+          <ul>
+            <li *ngFor="let city of cities$ | async" (click)="viewDetails(city)">
+              <span class="name">
+                {{city.flag}} {{city.name}}
+              </span>
+              <span class="icon" (click)="removeCity(city)">
+                <i class="fas fa-trash-alt"></i>
+              </span>
+            </li>
+          </ul>
+          <p>Number of places visited: {{numberOfVisited}}</p>
+        </div>
+    </section>
+    <section class="column">
+      <div class="box" *ngIf="currentCity">
+        <app-city-detail [city]="currentCity" (background)="setBackgroundImage($event)"></app-city-detail>
+      </div>
+      <div class="box column">
+          <div class="field">
+            <input #newCityName
+                    type="text"
+                    placeholder="City"
+                    class="input">
+          </div>
+          <div class="field">
+            <input #newCountryName
+                    type="text"
+                    placeholder="Country"
+                    class="input">
+          </div>
+          <button (click)="addCity(newCityName, newCountryName)"
+                  class="button">Add</button>
+        </div>
+    </section>
+  </div>
+</div>

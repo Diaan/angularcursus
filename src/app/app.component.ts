@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  offlineWarning: string;
+
+  @HostListener('window:offline')
+  onOffline() {
+    this.offlineWarning = 'we zijn offline';
+  }
+
+  @HostListener('window:online')
+  onOnline() {
+    this.offlineWarning = null;
+  }
 }

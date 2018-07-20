@@ -1,0 +1,6 @@
+<app-hero [title]="city.name" [image]="'url('+(city.image | async)?.regular+')'"></app-hero>
+<span class="icon" [ngSwitch]="city.visited" (click)="visit(city)">
+    <i *ngSwitchCase="true" class="fas fa-check-square"></i>
+    <i *ngSwitchCase="false" class="far fa-check-square"></i>
+</span>
+{{city.name}}, {{city.country}}

@@ -1,0 +1,39 @@
+[
+  {
+    "id":1,
+    "name": "Den Bosch",
+    "country": "The Netherlands",
+    "flag": "🇳🇱",
+    "visited": true
+  },
+  {
+    "id":2,
+    "name": "Melbourne",
+    "country": "Australia",
+    "flag": "🇦🇺"
+  },
+  {
+    "id":3,
+    "name": "Stockholm",
+    "country": "Sweden",
+    "flag": "🇸🇪"
+  },
+  {
+    "id":4,
+    "name": "New York",
+    "country": "United States",
+    "flag": "🇺🇸"
+  },
+  {
+    "id":5,
+    "name": "Vancouver",
+    "country": "Canada",
+    "flag": "🇨🇦"
+  },
+  {
+    "id":6,
+    "name": "Copenhagen",
+    "country": "Denmark",
+    "flag": "🇩🇰"
+  }
+]

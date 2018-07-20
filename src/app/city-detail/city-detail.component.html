@@ -1,0 +1,7 @@
+<a [routerLink]="['/city',city.id]">Open city page</a>
+<span class="icon" [ngSwitch]="city.visited" (click)="visit(city)">
+    <i *ngSwitchCase="true" class="fas fa-check-square"></i>
+    <i *ngSwitchCase="false" class="far fa-check-square"></i>
+</span>
+{{city.name}}, {{city.country}}
+<img src="{{(city.image | async)?.small}}" (click)="setBackground(city.image)" class="image"/>

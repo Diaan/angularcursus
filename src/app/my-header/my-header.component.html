@@ -1,0 +1,36 @@
+<div class="container">
+  <h1 class="navbar-brand">
+    <span class="navbar-item">
+        <span class="icon is-large" [style.color]="avatarColor">
+          <i class="fas fa-user-circle fa-2x"></i>
+        </span>
+        Welcome {{name}}
+    </span>
+
+    <div class="navbar-item" *ngIf="frequentTraveller">
+      <span class="icon">
+        <i class="fas fa-globe-africa"></i>
+      </span>
+    </div>
+  </h1>
+
+  <span class="navbar-item">
+    <select class="select" #avatarColorInput (change)="setColor(avatarColorInput.value)">
+      <option value="red">Color 1</option>
+      <option value="blue">Color 2</option>
+      <option value="green">Color 3</option>
+      <option value="yellow">Color 4</option>
+    </select>
+  </span>
+
+  <ul>
+    <li *ngFor="let city of visitedPlaces">{{city.flag}}</li>
+  </ul>
+
+  <div class="navbar-menu">
+    <a routerLink="cities" class="navbar-item">Home</a>
+    <a routerLink="user" class="navbar-item">User</a>
+  </div>
+
+</div>
+

@@ -1,0 +1,21 @@
+:host{
+  display: block;
+  padding-bottom: 200px;
+}
+
+ul{
+  margin-left: 0;
+}
+
+li{
+  display: flex;
+  cursor: pointer;
+}
+
+li > .name{
+  flex: 1 1 auto;
+}
+
+li > .icon{
+  flex: 0 0 auto;
+}
